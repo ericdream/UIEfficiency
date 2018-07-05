@@ -20,8 +20,6 @@
 		0747635520EB490000AB4BC3 /* UIEfficiency.h in Headers */ = {isa = PBXBuildFile; fileRef = 0747634520EB48FF00AB4BC3 /* UIEfficiency.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0747635820EB490000AB4BC3 /* UIEfficiency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0747634320EB48FF00AB4BC3 /* UIEfficiency.framework */; };
 		0747635920EB490000AB4BC3 /* UIEfficiency.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0747634320EB48FF00AB4BC3 /* UIEfficiency.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		0747636620EB4A3700AB4BC3 /* UILabel+test.h in Headers */ = {isa = PBXBuildFile; fileRef = 0747636420EB4A3700AB4BC3 /* UILabel+test.h */; };
-		0747636720EB4A3700AB4BC3 /* UILabel+test.m in Sources */ = {isa = PBXBuildFile; fileRef = 0747636520EB4A3700AB4BC3 /* UILabel+test.m */; };
 		07684C9820807D9C00667D68 /* EFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07684C9720807D9C00667D68 /* EFView.m */; };
 		07684C9B2080928C00667D68 /* EFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 07684C9A2080928C00667D68 /* EFLabel.m */; };
 		07710595207B69F2003E9DC4 /* UIView+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 07710594207B69F2003E9DC4 /* UIView+Test.m */; };
@@ -91,8 +89,6 @@
 		0747634B20EB48FF00AB4BC3 /* UIEfficiencyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIEfficiencyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0747635220EB490000AB4BC3 /* UIEfficiencyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIEfficiencyTests.m; sourceTree = "<group>"; };
 		0747635420EB490000AB4BC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0747636420EB4A3700AB4BC3 /* UILabel+test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+test.h"; sourceTree = "<group>"; };
-		0747636520EB4A3700AB4BC3 /* UILabel+test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+test.m"; sourceTree = "<group>"; };
 		07684C9620807D9C00667D68 /* EFView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFView.h; sourceTree = "<group>"; };
 		07684C9720807D9C00667D68 /* EFView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFView.m; sourceTree = "<group>"; };
 		07684C992080928C00667D68 /* EFLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFLabel.h; sourceTree = "<group>"; };
@@ -193,8 +189,6 @@
 			isa = PBXGroup;
 			children = (
 				0747634520EB48FF00AB4BC3 /* UIEfficiency.h */,
-				0747636420EB4A3700AB4BC3 /* UILabel+test.h */,
-				0747636520EB4A3700AB4BC3 /* UILabel+test.m */,
 				0747634620EB48FF00AB4BC3 /* Info.plist */,
 			);
 			path = UIEfficiency;
@@ -251,7 +245,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0747635520EB490000AB4BC3 /* UIEfficiency.h in Headers */,
-				0747636620EB4A3700AB4BC3 /* UILabel+test.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,8 +259,6 @@
 				071F8D271FF1F1F300805901 /* Sources */,
 				071F8D281FF1F1F300805901 /* Frameworks */,
 				071F8D291FF1F1F300805901 /* Resources */,
-				4D97B5D237CFA88D30DB0470 /* [CP] Embed Pods Frameworks */,
-				8FBFBDD454B21AD88E157DF7 /* [CP] Copy Pods Resources */,
 				0747635F20EB490000AB4BC3 /* Embed Frameworks */,
 			);
 			buildRules = (
@@ -390,21 +381,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4D97B5D237CFA88D30DB0470 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleControl/Pods-SimpleControl-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		58EB86767EC89CA571DB7DA4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -421,21 +397,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		8FBFBDD454B21AD88E157DF7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleControl/Pods-SimpleControl-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -463,7 +424,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0747636720EB4A3700AB4BC3 /* UILabel+test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

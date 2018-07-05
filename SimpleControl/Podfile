@@ -1,9 +1,9 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 target 'SimpleControl' do
-pod 'Masonry'
-pod 'CocoaLumberjack'
-pod 'YYKit'
-pod 'SDWebImage', '~> 4.0'
-pod 'FBMemoryProfiler'
+#pod 'Masonry'
+#pod 'CocoaLumberjack'
+#pod 'YYKit'
+#pod 'SDWebImage', '~> 4.0'
+#pod 'FBMemoryProfiler'
 end
